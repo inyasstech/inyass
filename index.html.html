@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSC 307 Web Application</title>
+    <link rel="stylesheet" type="text/css" href="w3.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: px solid #333;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-black w3-padding">
+      <marquee><h1 class="w3-text-white">COSC 307 Web Application Engineering</h1></marquee> 
+    </div>
+    <div class="w3-responsive" style="margin-left: 5%; margin-right: 5%">
+    <table class=" w3-table-all w3-hoverable w3-card-4">
+        <h2>Exam Timetable</h2>
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Exam Center</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Invigilator Sign</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add exam timetable rows dynamically using server-side logic -->
+            
+            <tr>
+                <td>1</td>
+                <td>COSC301</td>
+                <td>Data Structure and Algorithm</td>
+                <td>Minna</td>
+                <td>2024-01-18</td>
+                <td>10:00am - 12:00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>COSC303</td>
+                <td>Computer Architecture</td>
+                <td>Minna</td>
+                <td>2024-01-17</td>
+                <td>10:00am - 12:00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>COSC305</td>
+                <td>System Analysis and Design</td>
+                <td>Minna</td>
+                <td>2024-01-18</td>
+                <td>10:00am - 12:00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>COSC307</td>
+                <td>Web Application Engineering I</td>
+                <td>Minna</td>
+                <td>2024-01-14</td>
+                <td>10:00am - 12:00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>COSC309</td>
+                <td>Database Management Systems</td>
+                <td>Minna</td>
+                <td>2024-01-13</td>
+                <td>10:00am - 12:00</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <p class="w3-text-red">Important Notice</p>
+        <ul>
+            <li>Do not bring your <b>Wrist Watch, Mobile Phone, Electronic Device or Bag to the Examination Hall</b></li>
+            <li class="w3-text-red">Students whose examination are for BOTH GROUPS omn Fridays Morning (9:00am to Noon) but are unable <br> to meet up with the timing can go to their designated venues on Saturdays from 4:00am - 7:00pm to write the <br> missed examination accordingly.</li>
+        </ul>
+    </div>
+    </div>
+    <div class="w3-card-4 w3-leftbar w3-border-pink" style="width: 50%; margin-left: 25%; margin-top: 20px; margin-bottom: 20px;">
+        <h2 class="w3-center">Registration Form</h2>
+        <form id="examForm" class="w3-form">
+            <div class="w3-margin">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+            </div>
+           <div class="w3-margin">
+               <label for="regNumber">Reg Number:</label>
+                <input type="text" id="regNumber" name="regNumber" placeholder="Enter Registration Number" required>
+
+           </div>
+            <div class="w3-margin">
+               <label for="faculty">Faculty:</label>
+                <input type="text" id="faculty" name="faculty" placeholder="Enter Faculty" required>
+            </div>
+            <div class="w3-margin">
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" placeholder="Enter Department" required>
+            </div>
+            <div class="w3-margin">
+                <label>Are you ready for the exam?</label>
+                <input type="radio" id="readyYes" name="ready" value="yes" required>Yes
+                <input type="radio" id="readyNo" name="ready" value="no" required>No
+            </div>
+            <div class="w3-margin">
+                <label for="examCenter">Select Exam Center:</label>
+                <select id="examCenter" name="examCenter" required>
+                    <option value="Lagos">Lagos</option>
+                    <option value="London">Minna</option>
+                    <option value="Zaria">Zaria</option>
+                    <option value="Dubai">Kogi</option>
+                    <option value="Abuja">Abuja</option>
+                </select>
+                <button type="button" onclick="submitForm()">Submit</button>   
+            </div>
+            
+        </form>
+    </div>
+    <section class="w3-center w3-padding w3-black w3-opacity">
+        <div class="contact ">
+            <p>Concept Designed by Salihu Baba El-Musa</p>
+        </div>
+    </section>
+    <script>
+        function submitForm() {
+            // Fetch form data
+            const name = document.getElementById('name').value;
+            const regNumber = document.getElementById('regNumber').value;
+            const faculty = document.getElementById('faculty').value;
+            const department = document.getElementById('department').value;
+            const ready = document.querySelector('input[name="ready"]:checked');
+            const examCenter = document.getElementById('examCenter').value;
+
+            // You can perform further actions here, such as sending data to a server or displaying a confirmation message.
+            console.log('Form submitted:');
+            console.log('Name:', name);
+            console.log('Reg Number:', regNumber);
+            console.log('Faculty:', faculty);
+            console.log('Department:', department);
+            console.log('Ready for exam:', ready ? ready.value : 'Not selected');
+            console.log('Exam Center:', examCenter);
+        }
+    </script>
+
+</body>
+</html>
